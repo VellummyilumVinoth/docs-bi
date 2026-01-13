@@ -1,4 +1,4 @@
-# Data Mapping
+# Manual Data Mapping
 
 This guide shows how to build an integration that transforms a JSON payload into a different JSON structure using WSO2 Integrator: BI Data Mapper. You will create an HTTP service with a single resource (`transform`) to receive a JSON payload and return the transformed result.
 
@@ -10,8 +10,8 @@ This guide shows how to build an integration that transforms a JSON payload into
 4. Select integration directory location by clicking on the **Select Path** button.
 5. Click on the **Create Integration** button to create the integration project.  
 
-    <a href="{{base_path}}/assets/img/developer-guides/data-mapping/create-integration.png">
-    <img src="{{base_path}}/assets/img/developer-guides/data-mapping/create-integration.png" alt="Create Integration" width="70%"></a>
+    <a href="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/create-integration.png">
+    <img src="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/create-integration.png" alt="Create Integration" width="70%"></a>
 
 ## Step 2: Create an HTTP service
 
@@ -19,8 +19,8 @@ This guide shows how to build an integration that transforms a JSON payload into
 2. Select **HTTP Service** under the **Integration as API** category.
 3. Click on the **Create** button to create the new service with the default configurations.
 
-    <a href="{{base_path}}/assets/img/developer-guides/data-mapping/create-service.png">
-    <img src="{{base_path}}/assets/img/developer-guides/data-mapping/create-service.png" alt="Create Service" width="70%"></a>
+    <a href="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/create-service.png">
+    <img src="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/create-service.png" alt="Create Service" width="70%"></a>
 
 ## Step 3: Add the resource method
 
@@ -50,8 +50,8 @@ This guide shows how to build an integration that transforms a JSON payload into
     }
     ```
 
-    <a href="{{base_path}}/assets/img/developer-guides/data-mapping/create-new-type.gif">
-    <img src="{{base_path}}/assets/img/developer-guides/data-mapping/create-new-type.gif" alt="Create New Type" width="70%"></a>
+    <a href="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/create-new-type.gif">
+    <img src="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/create-new-type.gif" alt="Create New Type" width="70%"></a>
 
 4. Change the response body schema of the `201` response to `Output`.
 5. To create the type named `Output`, click **Create New Type** within the **Message Body Type** editor.
@@ -77,8 +77,8 @@ This guide shows how to build an integration that transforms a JSON payload into
     }
     ```
 
-    <a href="{{base_path}}/assets/img/developer-guides/data-mapping/type-from-json.gif">
-    <img src="{{base_path}}/assets/img/developer-guides/data-mapping/type-from-json.gif" alt="Create Type From JSON" width="70%"></a>
+    <a href="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/type-from-json.gif">
+    <img src="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/type-from-json.gif" alt="Create Type From JSON" width="70%"></a>
 
 7. Click **Save** to apply the response configuration.
 8. Finally, click **Save** to update the resource with the specified configurations. 
@@ -103,13 +103,13 @@ This guide shows how to build an integration that transforms a JSON payload into
     | Inputs           | `Input input` |
     | Output           | `Output` |
 
-    <a href="{{base_path}}/assets/img/developer-guides/data-mapping/add-data-mapper.png"><img src="{{base_path}}/assets/img/developer-guides/data-mapping/add-data-mapper.png" alt="Add Data Mapper" width="70%"></a>
+    <a href="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/add-data-mapper.png"><img src="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/add-data-mapper.png" alt="Add Data Mapper" width="70%"></a>
 
 5. Your newly created data mapper appears under **Current Integration**. Click it to add it to the sequence.
 6. Set `payload` as the **Input** and `outputResult` as the **Result**, then save.
 7. Click the kebab menu on the **Map Data** node and choose **View** to open the visual data mapper.
 
-    <a href="{{base_path}}/assets/img/developer-guides/data-mapping/data-mapper-added.png"><img src="{{base_path}}/assets/img/developer-guides/data-mapping/data-mapper-added.png" alt="Data Mapper Added" width="70%"></a>
+    <a href="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/data-mapper-added.png"><img src="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/data-mapper-added.png" alt="Data Mapper Added" width="70%"></a>
 
 ## Step 6 (Optional): Add an inline data mapper
 
@@ -119,9 +119,9 @@ This guide shows how to build an integration that transforms a JSON payload into
 4. Provide `output` as the Name and select `Output` as the Type.
 5. Once you select the type, the **Open in Data Mapper** button appears. Click it to open the visual data mapper.
 
-    <a href="{{base_path}}/assets/img/developer-guides/data-mapping/add-inline-data-mapper.png"><img src="{{base_path}}/assets/img/developer-guides/data-mapping/add-inline-data-mapper.png" alt="Add Inline Data Mapper" width="70%"></a>
+    <a href="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/add-inline-data-mapper.png"><img src="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/add-inline-data-mapper.png" alt="Add Inline Data Mapper" width="70%"></a>
 
-    <a href="{{base_path}}/assets/img/developer-guides/data-mapping/inline-data-mapper-added.png"><img src="{{base_path}}/assets/img/developer-guides/data-mapping/inline-data-mapper-added.png" alt="Inline Data Mapper Added" width="70%"></a>
+    <a href="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/inline-data-mapper-added.png"><img src="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/inline-data-mapper-added.png" alt="Inline Data Mapper Added" width="70%"></a>
 
 ## Step 7: Create mappings
 
@@ -129,33 +129,36 @@ Click a source field, then click the desired target field to create a mapping.
 
 ### Create simple mapping
 
-<a href="{{base_path}}/assets/img/developer-guides/data-mapping/simple-mapping.gif"><img src="{{base_path}}/assets/img/developer-guides/data-mapping/simple-mapping.gif" alt="Simple Mapping" width="70%"></a>
+<a href="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/simple-mapping.gif"><img src="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/simple-mapping.gif" alt="Simple Mapping" width="70%"></a>
 
-### Auto mapping
+### AI data mapping
 
-Click the **Auto Map** button to automatically create mappings. The BI Copilot panel opens to assist you.
+Click the **Auto Map** button to automatically create AI mappings. The BI Copilot panel opens to assist you.
 
 
-<a href="{{base_path}}/assets/img/developer-guides/data-mapping/auto-mapping.gif"><img src="{{base_path}}/assets/img/developer-guides/data-mapping/auto-mapping.gif" alt="Auto Mapping" width="70%"></a>
+<a href="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/auto-mapping.gif"><img src="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/auto-mapping.gif" alt="Auto Mapping" width="70%"></a>
+
+!!! info "AI Data Mapper"
+    To learn more about AI-powered data mapping capabilities, see [AI Data Mapping]({{base_path}}/developer-guides/data-mapping/ai-data-mapping/).
 
 ### Many-to-one mapping
 
 You can map multiple source fields to a single target field. For example, create the `fullName` field in the output by combining the `firstName` and `lastName` fields from the input.
 
-<a href="{{base_path}}/assets/img/developer-guides/data-mapping/many-to-one-mapping.gif"><img src="{{base_path}}/assets/img/developer-guides/data-mapping/many-to-one-mapping.gif" alt="Many to One Mapping" width="70%"></a>
+<a href="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/many-to-one-mapping.gif"><img src="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/many-to-one-mapping.gif" alt="Many to One Mapping" width="70%"></a>
 
 ### Edit mapping expression
 
 Click the `<>` button on any link, or use the context menu on any output field, to edit the mapping expression.
 
-<a href="{{base_path}}/assets/img/developer-guides/data-mapping/edit-mapping.gif"><img src="{{base_path}}/assets/img/developer-guides/data-mapping/edit-mapping.gif" alt="Edit Mapping Expression" width="70%"></a>
+<a href="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/edit-mapping.gif"><img src="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/edit-mapping.gif" alt="Edit Mapping Expression" width="70%"></a>
 
 ### Array mapping
 
 BI Data Mapper offers several ways to map arrays. You can map entire arrays, specific elements, or use functions to manipulate array data.
 To map the first phone number from the `phoneNumbers` array in the input to the `primaryPhone` field in the output, create a mapping from `phoneNumbers` to `primaryPhone` and pick "Extract Single Element From Array" to get the first element. 
 
-<a href="{{base_path}}/assets/img/developer-guides/data-mapping/array-mapping.gif"><img src="{{base_path}}/assets/img/developer-guides/data-mapping/array-mapping.gif" alt="Array Mapping" width="70%"></a>
+<a href="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/array-mapping.gif"><img src="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/array-mapping.gif" alt="Array Mapping" width="70%"></a>
 
 
 ## Step 8: Return the transformed payload
@@ -164,7 +167,7 @@ To map the first phone number from the `phoneNumbers` array in the input to the 
 2. Hover over the arrow after the **Map Data** node in the flow diagram and click the ➕ button.
 3. Select **Return** from the node panel. 
 
-    <a href="{{base_path}}/assets/img/developer-guides/data-mapping/add-return.png"><img src="{{base_path}}/assets/img/developer-guides/data-mapping/add-return.png" alt="Add Return" width="70%"></a>
+    <a href="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/add-return.png"><img src="{{base_path}}/assets/img/developer-guides/data-mapping/manual-data-mapping/add-return.png" alt="Add Return" width="70%"></a>
 
 4. Provide `outputResult` as the return expression.
 5. The final code looks like this. The source view can be accessed by clicking the `</>` button in the top right corner. 
